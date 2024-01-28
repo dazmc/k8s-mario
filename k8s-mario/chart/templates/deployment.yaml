@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "k8s-mario.fullname" . }}-deployment
+  labels:
+  {{- include "k8s-mario.labels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.deployment.replicas }}
+  selector:
+    matchLabels:
+      app: mario
+    {{- include "k8s-mario.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        app: mario
+      {{- include "k8s-mario.selectorLabels" . | nindent 8 }}
+    spec:
+      containers:
+      - env:
+        image: {{ .Values.deployment.marioContainer.image.repository }}:{{ .Values.deployment.marioContainer.image.tag | default .Chart.AppVersion }}
+        name: mario-container
+        ports:
+        - name: http
+          containerPort: 80
+          protocol: TCP
+        livenessProbe:
+          httpGet:
+            path: /
+            port: http
+        readinessProbe:
+          httpGet:
+            path: /
+            port: http
+        resources: {}
