@@ -6,7 +6,7 @@ deployment:
   replicas: 2
 service:
   ports:
-  - port: 81
+  - port: 80
     protocol: TCP
     targetPort: 80
   type: LoadBalancer
