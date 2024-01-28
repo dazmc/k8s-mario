@@ -10,4 +10,4 @@ spec:
     app: mario
   {{- include "k8s-mario.selectorLabels" . | nindent 4 }}
   ports:
-    - port: {{ .Values.service.port }}
+	{{- .Values.service.ports | toYaml | nindent 2 -}}
