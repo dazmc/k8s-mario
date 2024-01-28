@@ -10,10 +10,10 @@ spec:
   releaseName: k8s-mario
   chart:
     spec:
-      chart: ./k8s-mario
+      chart: ./k8s-mario/chart
   values:
     controller:
       image:
         repository: sevenajay/mario
-        tag: "v1.1.1"
+        tag: "latest"
       replicaCount: 2
