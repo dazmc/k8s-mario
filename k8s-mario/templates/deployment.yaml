@@ -18,8 +18,7 @@ spec:
     spec:
       containers:
       - env:
-        image: {{ .Values.deployment.marioContainer.image.repository }}:{{ .Values.deployment.marioContainer.image.tag
-          | default .Chart.AppVersion }}
+        image: {{ .Values.deployment.marioContainer.image.repository }}:{{ .Values.deployment.marioContainer.image.tag | default .Chart.AppVersion }}
         name: mario-container
         ports:
         - name: http
