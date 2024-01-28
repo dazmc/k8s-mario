@@ -1,0 +1,12 @@
+deployment:
+  marioContainer:
+    image:
+      repository: sevenajay/mario
+      tag: latest
+  replicas: 2
+service:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80
+  type: LoadBalancer
