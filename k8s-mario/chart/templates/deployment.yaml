@@ -21,15 +21,5 @@ spec:
         image: {{ .Values.deployment.marioContainer.image.repository }}:{{ .Values.deployment.marioContainer.image.tag | default .Chart.AppVersion }}
         name: mario-container
         ports:
-        - name: http
-          containerPort: 80
-          protocol: TCP
-        livenessProbe:
-          httpGet:
-            path: /
-            port: http
-        readinessProbe:
-          httpGet:
-            path: /
-            port: http
+        - containerPort: 80
         resources: {}
