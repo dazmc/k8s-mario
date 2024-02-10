@@ -1,16 +1,16 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: k8s-mario2
-  namespace: k8s-mario2
+  name: k8s-mario
+  namespace: k8s-mario
   annotations:
     clusterconfig.azure.com/use-managed-source: "true"
 spec:
   interval: 1m
-  releaseName: k8s-mario2
+  releaseName: k8s-mario
   chart:
     spec:
       chart: ./k8s-mario/chart
       reconcileStrategy: Revision
   values:
-    replicaCount: 4
+    replicaCount: 2
