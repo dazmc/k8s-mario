@@ -16,4 +16,4 @@ spec:
       image:
         repository: sevenajay/mario
         tag: "latest"
-      replicaCount: 2
+      replicaCount: 3
