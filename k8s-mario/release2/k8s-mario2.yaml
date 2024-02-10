@@ -11,6 +11,6 @@ spec:
   chart:
     spec:
       chart: ./k8s-mario/chart
-      reconcileStrategy: GitRepository
+      reconcileStrategy: Revision
   values:
     replicaCount: 1
