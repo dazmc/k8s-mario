@@ -3,7 +3,7 @@ deployment:
     image:
       repository: sevenajay/mario
       tag: latest
-  replicas: 3
+  replicas: 4
 service:
   ports:
   - port: 80
