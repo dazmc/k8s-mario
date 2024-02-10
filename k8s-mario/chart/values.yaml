@@ -1,9 +1,9 @@
-deployment:
-  marioContainer:
-    image:
-      repository: sevenajay/mario
-      tag: latest
-  replicas: 5
+replicaCount: 1
+
+image:
+  repository: sevenajay/mario
+  tag: latest
+
 service:
   ports:
   - port: 80
