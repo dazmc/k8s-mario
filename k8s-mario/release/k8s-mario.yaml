@@ -13,4 +13,4 @@ spec:
       chart: ./k8s-mario/chart
       reconcileStrategy: Revision
   values:
-    replicaCount: 10
+    replicaCount: 5
