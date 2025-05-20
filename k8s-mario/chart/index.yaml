@@ -1,3 +1,14 @@
 apiVersion: v1
-entries: {}
-generated: "2025-05-20T14:16:26.269141302+01:00"
+entries:
+  k8s-mario:
+  - apiVersion: v2
+    appVersion: 0.1.2
+    created: "2025-05-20T15:42:58.538497006+01:00"
+    description: A Helm chart for Kubernetes
+    digest: db79e45518d29a3fe8147c151612d32efd8978f9371653be2899c6a63965460b
+    name: k8s-mario
+    type: application
+    urls:
+    - k8s-mario-0.1.2.tgz
+    version: 0.1.2
+generated: "2025-05-20T15:42:58.53626544+01:00"
